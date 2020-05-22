@@ -50,6 +50,9 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Services" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -116,10 +119,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\ADAMod.cs" />
+    <Compile Include="Models\Connection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -127,9 +133,20 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="App_Readme\Elmah.txt" />
-    <Content Include="Assets\js\materialize-init.js" />
+    <Content Include="Assets\css\master.css" />
+    <Content Include="Assets\js\dashboard.js" />
     <Content Include="Assets\js\jquery-3.3.1.min.js" />
     <Content Include="Global.asax" />
+    <Content Include="node_modules\bootstrap-4.5.0-dist\css\bootstrap-grid.css" />
+    <Content Include="node_modules\bootstrap-4.5.0-dist\css\bootstrap-grid.min.css" />
+    <Content Include="node_modules\bootstrap-4.5.0-dist\css\bootstrap-reboot.css" />
+    <Content Include="node_modules\bootstrap-4.5.0-dist\css\bootstrap-reboot.min.css" />
+    <Content Include="node_modules\bootstrap-4.5.0-dist\css\bootstrap.css" />
+    <Content Include="node_modules\bootstrap-4.5.0-dist\css\bootstrap.min.css" />
+    <Content Include="node_modules\bootstrap-4.5.0-dist\js\bootstrap.bundle.js" />
+    <Content Include="node_modules\bootstrap-4.5.0-dist\js\bootstrap.bundle.min.js" />
+    <Content Include="node_modules\bootstrap-4.5.0-dist\js\bootstrap.js" />
+    <Content Include="node_modules\bootstrap-4.5.0-dist\js\bootstrap.min.js" />
     <Content Include="node_modules\materialize\css\materialize.css" />
     <Content Include="node_modules\materialize\css\materialize.min.css" />
     <Content Include="node_modules\materialize\js\materialize.js" />
@@ -145,7 +162,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -162,6 +178,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Home\Dashboard.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="node_modules\bootstrap-4.5.0-dist\css\bootstrap-grid.css.map" />
+    <Content Include="node_modules\bootstrap-4.5.0-dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="node_modules\bootstrap-4.5.0-dist\css\bootstrap-reboot.css.map" />
+    <Content Include="node_modules\bootstrap-4.5.0-dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="node_modules\bootstrap-4.5.0-dist\css\bootstrap.css.map" />
+    <Content Include="node_modules\bootstrap-4.5.0-dist\css\bootstrap.min.css.map" />
+    <Content Include="node_modules\bootstrap-4.5.0-dist\js\bootstrap.bundle.js.map" />
+    <Content Include="node_modules\bootstrap-4.5.0-dist\js\bootstrap.bundle.min.js.map" />
+    <Content Include="node_modules\bootstrap-4.5.0-dist\js\bootstrap.js.map" />
+    <Content Include="node_modules\bootstrap-4.5.0-dist\js\bootstrap.min.js.map" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
